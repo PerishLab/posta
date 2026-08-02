@@ -1,0 +1,28 @@
+[package]
+name = "posta"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = ["perish"]
+description = "Library-first postal protocol built on Keel"
+readme = "../../README.md"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+keel.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+axum.workspace = true
+http-body-util.workspace = true
+serde_json.workspace = true
+tempfile.workspace = true
+tokio.workspace = true
+tower.workspace = true
+
+[[test]]
+name = "postal"
+path = "tests/postal.rs"
