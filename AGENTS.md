@@ -28,9 +28,11 @@ transactional ceremony; Keel owns generic resource mechanism and projections.
 ## Operating
 
 - Never commit on `main`.
-- Run `runseal :guard` before land.
-- Land only through `runseal :land`.
-- Operator wrappers under `.runseal/` are TypeScript.
+- `.forgejo/workflows/guard.yml` is the canonical guard lane. Run it before
+  land: `plumb doctor .`, `cargo fmt --all --check`, `cargo clippy --locked
+  --workspace --all-targets -- -D warnings`, `cargo check --locked --workspace
+  --all-targets --release`, `cargo test --locked --workspace`, `ectropy .`.
+- Land only through `plumb land`.
 
 ## Verification
 
