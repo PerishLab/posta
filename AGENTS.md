@@ -23,15 +23,14 @@ transactional ceremony; Keel owns generic resource mechanism and projections.
 - Early replies remain durable and veiled until their thread becomes known.
 - One Keel transaction closes every multi-fact protocol transition.
 - Unknown, malformed, conflicting, or drifted state refuses.
-- Single word, block depth <= 4, path depth <= 4, comments denied by default.
+- Single word, block depth <= 4, path depth <= 3, comments denied by default.
 
 ## Operating
 
 - Never commit on `main`.
-- `.forgejo/workflows/guard.yml` is the canonical guard lane. Run it before
-  land: `plumb doctor .`, `cargo fmt --all --check`, `cargo clippy --locked
-  --workspace --all-targets -- -D warnings`, `cargo check --locked --workspace
-  --all-targets --release`, `cargo test --locked --workspace`, `ectropy .`.
+- Plumb's pre-commit Guard proves the staged tree and the commit carries its
+  proof; `plumb guard .` shows what it runs. Run `plumb configuration install`
+  once per checkout to project the hooks.
 - Land only through `plumb land`.
 
 ## Verification
