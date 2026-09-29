@@ -38,6 +38,8 @@ version for this executable model.
 ## Verification
 
 ```sh
-runseal :init
-runseal :guard
+plumb configuration install
+plumb guard .
 ```
+
+`docs/run/verify.md` is the cold-start closure.
