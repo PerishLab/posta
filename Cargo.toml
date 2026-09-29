@@ -6,12 +6,12 @@ members = ["crates/posta"]
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
-repository = "https://git.perish.top/PerishLab/posta"
+repository = "https://github.com/PerishLab/posta"
 
 [workspace.dependencies]
 axum = "0.8"
 http-body-util = "0.1"
-keel = { version = "0.10.0", registry = "perish" }
+keel = { version = "0", registry = "perish" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 tempfile = "3"
