@@ -1,5 +1,10 @@
 # Agents
 
+Read the canonical [PerishLab delivery governance](https://github.com/PerishLab/.github/blob/main/GOVERNANCE.md)
+at work start and again before delivery or Issue closure. That document owns
+organization-wide Issue, pull-request and acceptance policy; this file keeps
+repository-specific constraints without copying that policy.
+
 `posta` is a library-first postal protocol built on Keel. Product callers
 declare runtime policy and credential custody. Posta owns postal vocabulary and
 transactional ceremony; Keel owns generic resource mechanism and projections.
